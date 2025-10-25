@@ -215,31 +215,93 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="col-6 card border-left">
-          <h3>Autonomous Robot Car (Arduino)</h3>
-          <p class="muted">Line‑following, obstacle avoidance, and object manipulation using IR sensors, servos, and Arduino.</p>
-        </div>
-        <div class="col-6 card border-left">
-          <h3>FPGA vs ASIC for Satellite Systems</h3>
-          <p class="muted">Compared FPGA and ASIC designs for satellite subsystems in terms of performance, power, and cost.</p>
-        </div>
-        <div class="col-6 card border-left">
-          <h3>Smart Irrigation System (IoT)</h3>
-          <p class="muted">Self‑optimizing irrigation using Raspberry Pi, soil‑moisture sensing, and control logic to reduce water/energy.</p>
-        </div>
-        <div class="col-6 card border-left">
-          <h3>Voice‑Based Disease Detection</h3>
-          <p class="muted">DSP feature extraction and ML classifiers (e.g., SVM, RF) for screening potential from audio.</p>
-        </div>
-        <div class="col-6 card border-left">
-          <h3>Solar Panel I–V Curve Analysis</h3>
-          <p class="muted">Modeled PV behavior under different irradiance/temperature conditions; computed efficiency metrics.</p>
-        </div>
-      </div>
-    </section>
+<section id="projects" class="section">
+  <h2> Projects</h2>
+  <div class="grid">
+
+    <!-- Autonomous Robot Car -->
+    <div class="col-6 card border-left">
+      <h3>DIY Multi-functional Robot Car Using Arduino</h3>
+      <p class="muted">
+        Designed and programmed an autonomous vehicle capable of line following, obstacle avoidance, and object manipulation.
+        The project combined embedded programming, real-time sensor data processing, and servo-based actuation.
+        IR and ultrasonic sensors were used to detect paths and obstacles, while PID logic optimized motion control.
+      </p>
+      <ul class="muted">
+        <li><strong>Skills:</strong> Sensor integration, PWM motor control, real-time decision logic, Arduino C programming.</li>
+        <li><strong>Tools:</strong> Arduino IDE, Proteus Simulation, SolidWorks for chassis design.</li>
+        <li><strong>Outcome:</strong> Fully functional prototype demonstrated stable path tracking and dynamic obstacle avoidance.</li>
+      </ul>
+      <a class="btn" href="circuit_2_report[1][1].docx" target="_blank">View Project </a>
+    </div>
+
+    <!-- FPGA vs ASIC -->
+    <div class="col-6 card border-left">
+      <h3>FPGA vs ASIC for Satellite Systems</h3>
+      <p class="muted">
+        Conducted a comparative analysis of FPGA and ASIC implementations in satellite embedded systems to evaluate 
+        trade-offs between flexibility, cost, and performance. The project included a literature survey and simulation 
+        of computation loads under radiation-hardened environments.
+      </p>
+      <ul class="muted">
+        <li><strong>Skills:</strong> Hardware architecture analysis, power and latency estimation, and system modeling.</li>
+        <li><strong>Tools:</strong> MATLAB, Xilinx Vivado, and ModelSim.</li>
+        <li><strong>Outcome:</strong> Determined FPGA’s superiority for rapid prototyping and adaptive mission systems, 
+            while ASIC remains optimal for high-volume, low-power deployments.</li>
+      </ul>
+      <a class="btn" href="Literature Review FPGA vs ASIC on Satellite embeded sys (3).docx"_blank">View Project</a>
+    </div>
+
+    <!-- Smart Irrigation -->
+    <div class="col-6 card border-left">
+      <h3>Smart Irrigation System (IoT)</h3>
+      <p class="muted">
+        Developed a self-optimizing irrigation platform using Raspberry Pi, soil-moisture and temperature sensors, 
+        and cloud-based monitoring to minimize water waste in agriculture. The system applied machine-learning-based 
+        threshold tuning and controlled water pumps automatically through real-time analytics.
+      </p>
+      <ul class="muted">
+        <li><strong>Skills:</strong> IoT architecture, sensor calibration, Python automation, cloud integration.</li>
+        <li><strong>Tools:</strong> Raspberry Pi 4, Python, ThingSpeak API, Node-RED dashboard.</li>
+        <li><strong>Outcome:</strong> Achieved up to 30% water-use reduction while maintaining optimal soil humidity levels.</li>
+      </ul>
+      <a class="btn" href="Survey on Raspberry Pi and Arduino (2) (1) (1).docx" target="_blank">View Project </a>
+    </div>
+
+    <!-- Voice-Based Disease Detection -->
+    <div class="col-6 card border-left">
+      <h3>Voice-Based Disease Detection</h3>
+      <p class="muted">
+        Applied digital-signal-processing and machine-learning techniques to classify potential respiratory disorders 
+        through voice recordings. Features such as MFCCs and spectral entropy were extracted and analyzed using 
+        supervised classifiers to differentiate healthy from abnormal speech patterns.
+      </p>
+      <ul class="muted">
+        <li><strong>Skills:</strong> Feature engineering, SVM and Random Forest training, dataset balancing, and accuracy tuning.</li>
+        <li><strong>Tools:</strong> MATLAB, Python (Librosa, scikit-learn), Audacity for preprocessing.</li>
+        <li><strong>Outcome:</strong> Achieved classification accuracy of 92% with an interpretable decision-tree model.</li>
+      </ul>
+      <a class="btn" href="Signal_matlab_project (1).pdf" target="_blank">View Project</a>
+    </div>
+
+    <!-- Solar I-V Analysis -->
+    <div class="col-6 card border-left">
+      <h3>Solar Panel I–V Curve Analysis</h3>
+      <p class="muted">
+        Simulated and analyzed photovoltaic I–V and P–V curves under varying irradiance and temperature conditions.
+        Implemented MATLAB algorithms to calculate maximum power points and efficiency improvements via MPPT logic.
+        The study emphasized the role of environmental conditions on solar-panel performance.
+      </p>
+      <ul class="muted">
+        <li><strong>Skills:</strong> Circuit modeling, MPPT algorithms, data fitting, efficiency analysis.</li>
+        <li><strong>Tools:</strong> MATLAB/Simulink, Excel for post-processing visualization.</li>
+        <li><strong>Outcome:</strong> Validated expected nonlinear I–V characteristics and determined optimal panel performance at 25 °C and 1000 W/m².</li>
+      </ul>
+      <a class="btn" href="I-V Curve Report (1).docx" target="_blank">View Project </a>
+    </div>
+
+  </div>
+</section>
 
     <!-- LABS -->
 <section id="labs" class="section">
@@ -256,6 +318,7 @@
         <li>Tech stack: Python, pandas, matplotlib</li>
         <li>Skills developed: Data cleaning, filtering, EDA, and visualization</li>
       </ul>
+      
     </div>
 
     <div class="col-6 card border-left">
