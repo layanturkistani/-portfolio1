@@ -1,70 +1,300 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<title>My portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Layan Mansour Turkistani — Portfolio</title>
+  <meta name="description" content="Portfolio of Layan Mansour Turkistani, 4th-year Electrical and Computer Engineering student at Effat University (2022–2027)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* keep your palette */
+      --bg:#203924;                 /* dark green background */
+      --panel:hwb(57 91% 0%);       /* light cream panel */
+      --muted:#3b4e39;              /* muted text */
+      --text:#233e1d;               /* primary body text (fixed invalid value) */
+      --brand:#314336;              /* buttons/nav */
+      --accent:#ffffff;             /* button text */
+      --heading:lab(50.15% -17.45 13.99);     /* heading color requested */
+      --max:1100px;
+      --ring: 0 0 0 3px rgba(35,62,29,.15);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* Header */
+    .site-header{position:sticky;top:0;background:hwb(57 91% 0%);backdrop-filter:blur(10px);border-bottom:1px solid rgba(35,62,29,.15);z-index:20}
+    .nav{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
+    .brand{font-weight:800;letter-spacing:.2px;color:#233e1d}
+    .nav-links a{margin-left:18px;color:#233e1d;opacity:.9}
+
+    /* Buttons */
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:var(--brand);color:#fff;font-weight:600;border:1px solid rgba(0,0,0,.05)}
+    .btn:focus{outline:none;box-shadow:var(--ring)}
+
+    /* Hero */
+    .hero{max-width:var(--max);margin:40px auto;text-align:center;padding:56px 18px;background:radial-gradient(circle at center,#e8f3e8 0%, hsl(71, 100%, 96%) 100%);border-radius:18px;border:1px solid rgba(35,62,29,.15)}
+    .hero h1{font-size:clamp(28px,3.4vw,48px);line-height:1.15;margin:8px 0;color:var(--brand)}
+    .hero p{color:#2c3b2a;margin:0 0 20px;font-weight:500}
+    .hero-img{width:150px;height:150px;margin:0 auto 16px;object-fit:cover;border-radius:50%;border:4px solid #2c382a;box-shadow:0 0 15px rgba(84,113,84,.2)}
+
+    /* Sections */
+    .section{max-width:var(--max);margin:22px auto;padding:36px 18px}
+    .section h2{font-size:28px;margin:0 0 18px;color:var(--heading)}
+    h3{color:var(--heading);margin:4px 0 8px}
+    p{margin:0 0 10px}
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0}
+
+    /* Cards / Panels */
+    .card{background:var(--panel);border:1px solid rgba(35,62,29,.18);border-radius:16px;padding:18px}
+    .card.border-left{border-left:6px solid #233e1d}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(12,1fr)}
+    .col-6{grid-column:span 6}
+
+    /* Contact / About panels */
+    .panel{background:var(--panel);border:1px solid rgba(35,62,29,.18);border-radius:16px;padding:18px}
+
+    @media(max-width:960px){.col-6{grid-column:span 12}.nav-links{display:none}}
+  </style>
 </head>
-<style>
-</style>
 <body>
-<header>
-<div class="container">
-<h1>Layan Turkistani</h1>
-<nav>
-<ul>
-<li><a href="#about">About Me</a></li>
-<li><a href="#project">Project</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<section id="about">
-<div class="container">
-<h2>About Me</h2>
-<img src="layan.jpg">
-<p>A curious and creative problem-solver who enjoys exploring how technology can make everyday life smarter and more sustainable. Passionate about designing meaningful projects that blend innovation, design, and practicality.
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top">Layan Mansour Turkistani</a>
+      <div class="nav-links">
+        <a href="#education">Education</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#courses">Courses</a>
+        <a href="#projects">Projects</a>
+        <a href="#labs">Labs</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-Loves taking on challenges, learning new skills, and finding elegant solutions to complex problems. Whether it’s coding, designing, or brainstorming new ideas, the goal is always the same — to build something that inspires others and creates real impact.
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <img class="hero-img" src="layan.jpg" alt="Portrait of Layan Mansour Turkistani" loading="lazy" />
+      <h1>Layan Mansour Turkistani</h1>
+      <p></p>
+      <a class="btn" href="#projects">Explore My Portfolio</a>
+    </section>
 
-Outside of technical work, enjoys experimenting with design, photography, and small entrepreneurial ideas that connect creativity with technology.</p>
-</div>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <div class="panel">
+        <p>I’m a fourth-year Electrical and Computer Engineering undergraduate at Effat University in Jeddah, Saudi Arabia. My interests span embedded systems, control engineering, digital signal processing, and artificial intelligence — where hardware meets intelligent computation. I’m passionate about designing smart, efficient technologies that merge electronics, data, and automation to create meaningful real-world solutions.
+    <p> </p>
+   
+            With a strong foundation in mathematics, programming, and system design, I enjoy exploring how engineering innovation can make technology more adaptive, sustainable, and human-centered. Whether it’s developing IoT systems, intelligent controllers, or data-driven applications, I’m driven by curiosity and a desire to bridge creativity with engineering precision.</p>
+      </div>
+    </section>
+     <!-- EDUCATION -->
+<section id="education" class="section" style="margin-bottom: 40px;">
+  <h2>Education</h2>
+
+  <div class="card border-left" style="margin-bottom: 28px;">
+    <h3>Bachelor’s Degree in Electrical & Computer Engineering</h3>
+    <p class="muted">Effat University — Jeddah, Saudi Arabia (2022 – 2027)</p>
+    <p class="muted">Cumulative GPA: <strong>3.83/4.0</strong></p>
+    <ul class="muted">
+      <li>Dean’s List: <strong>2023–2024</strong> and <strong>2024–2025</strong>.</li>
+      <li>Focused on embedded systems, control theory, signal processing, and data-driven engineering.</li>
+      <li>Active in robotics, DSP, and IoT projects bridging theory and practice.</li>
+    </ul>
+  </div>
+
+  <div class="card border-left" style="margin-bottom: 28px;">
+    <h3>High School Diploma</h3>
+    <p class="muted">Al Yusr International School — Jeddah, Saudi Arabia (2019 – 2022)</p>
+    <p class="muted">Graduated with a GPA of <strong>3.90/4.0</strong></p>
+    <ul class="muted">
+    <li>Maintained consistent academic excellence as part of the honor roll throughout all years.</li>
+    <li>Recognized for strong leadership and teamwork in organizing school events and student initiatives.</li>
+    <li>Engaged in extracurricular activities focused on STEM innovation and creative problem-solving.</li>
+  </ul>
+  </div>
 </section>
 
 
+    <!-- COURSES -->
+    <section id="courses" class="section">
+      <h2>University Courses & Related Projects</h2>
+      <div class="grid">
+        <div class="col-6 card border-left">
+          <h3>Analog & Modern Control</h3>
+          <p class="muted">Classical and state‑space control: transfer functions, root‑locus, frequency response, stability (Routh‑Hurwitz), observers and state feedback.</p>
+          <ul class="muted">
+            <li><strong>Tools:</strong> MATLAB/Simulink for modeling and controller tuning.</li>
+            <li><strong>Project:</strong> Closed‑loop control design and simulation for a second‑order plant.</li>
+          </ul>
+        </div>
 
-<section id="project">
-<div class="container">
-<h2>Projects</h2>
-<div class="portfolio-grid">
-<div class="portfolio-item">
-<h3>DIY Multi-Functional Robot Car Using Arduino</h3>
-<img src="robot.jpg">
+        <div class="col-6 card border-left">
+          <h3>Digital Signal Processing & Signals and Systems</h3>
+          <p class="muted">Fourier/Laplace/Z‑transforms, sampling and aliasing, FIR/IIR filter design, spectral analysis, and system properties (LTI, convolution).</p>
+          <ul class="muted">
+            <li><strong>Project:</strong> <em>Speech Analysis & Recognition</em> — feature extraction in MATLAB (time/frequency features) and basic classifier evaluation.</li>
+            <li><strong>Skills:</strong> filter design, spectrograms, SNR, and evaluation metrics.</li>
+          </ul>
+        </div>
 
-<p>Built a multi-functional robot car capable of line following, obstacle avoidance, and object manipulation using an Arduino UNO, motor drivers, IR and ultrasonic sensors, and servo motors.
-The system was programmed and tested for real-time response and mobility, showcasing hands-on skills in embedded systems, robotics integration, and automation control.</p>
-</div>
-<div class="portfolio-item">
-<h3>Classifying Speech Disorders Using Voice Signals
-and Machine Learning
-</h3>
+        <div class="col-6 card border-left">
+          <h3>Digital Logic Design</h3>
+          <p class="muted">Combinational & sequential logic, K‑maps, FSMs, and FPGA basics.</p>
+          <ul class="muted">
+            <li><strong>Project:</strong> <em>Dancing Peacock LED</em> — pattern sequencing with counters/FSM on programmable logic.</li>
+            <li><strong>Artifacts:</strong> truth tables, timing diagrams, Verilog/VHDL snippets.</li>
+          </ul>
+        </div>
 
-<p>Developed a machine learning system that classifies speech disorders such as stuttering, dysarthria, and vocal tremor using voice signal analysis. The project combined synthetic and real voice data, extracted key acoustic features, and applied SVM, Random Forest, and Gradient Boosting models for classification.
-Results showed strong diagnostic potential, improving accuracy, early detection, and accessibility for speech disorder assessment through AI-driven analysis.</p>
-</div>
-<div class="portfolio-item">
-<h3>FPGA vs. ASIC in Satellite Embedded Systems with Power Subsystems and Sensor Multiplexing.</h3>
+        <div class="col-6 card border-left">
+          <h3>Computer Organization & Architecture</h3>
+          <p class="muted">Datapath & control, memory hierarchy, instruction sets, and basic pipelining.</p>
+          <ul class="muted">
+            <li><strong>Project:</strong> <em>FPGA vs ASIC for Satellite Systems</em> — literature review and modeling of performance/efficiency trade‑offs.</li>
+          </ul>
+        </div>
 
-<p>A hybrid FPGA-ASIC satellite power subsystem designed to improve energy efficiency and real-time adaptability.
-The FPGA manages dynamic power control and sensor data, while the ASIC ensures stable voltage regulation.
-Simulated with VHDL and Midsim, the system proved reliable and efficient for space applications.</p>
-</div>
+        <div class="col-6 card border-left">
+          <h3>Microprocessor Systems & Circuits II</h3>
+          <p class="muted">Microcontroller programming, timers/PWM/interrupts; circuit analysis and sensor interfacing.</p>
+          <ul class="muted">
+            <li><strong>Project:</strong> <em>DIY Robotic Arm</em> — servo control and embedded C/Arduino for pick‑and‑place tasks.</li>
+          </ul>
+        </div>
 
-<div class="portfolio-item">
-<h3>I-V Curve Analysis for Solar Cells</h3>
+        <div class="col-6 card border-left">
+          <h3>Principles of Computing (Python)</h3>
+          <p class="muted">Algorithmic thinking, data structures, and clean coding practices using Python.</p>
+          <ul class="muted">
+            <li><strong>Mini‑project:</strong> Sensor‑driven analog‑control simulation with data logging and simple visualization.</li>
+          </ul>
+        </div>
 
-<p>Developed a mathematical model and simulation to analyze the current-voltage (I-V) characteristics of photovoltaic (PV) cells under varying temperature and irradiance conditions.
-Used numerical methods (Newton-Raphson) and visualized the results using Gnuplot, providing insight into solar cell efficiency and performance behavior at different light levels.</p>
-</div>
-</div>
+        <div class="col-6 card border-left">
+          <h3>C++ Programming</h3>
+          <p class="muted">Structured programming, I/O, functions, arrays/vectors, pointers, and basic OOP.</p>
+          <ul class="muted">
+            <li><strong>Project:</strong> <em>I–V Curve Simulation</em> — modeled PV I–V characteristics and computed key points from input parameters.</li>
+          </ul>
+        </div>
+
+        <div class="col-6 card border-left">
+          <h3>Communication Systems</h3>
+          <p class="muted">Analog/digital modulation, channel impairments, bandwidth/bit‑rate trade‑offs.</p>
+          <ul class="muted">
+            <li><strong>Exercises:</strong> AM/FM modeling with noise and simple demodulation blocks.</li>
+          </ul>
+        </div>
+
+        <div class="col-6 card border-left">
+          <h3>Basic Electrical Machines</h3>
+          <p class="muted">DC machines, transformers, and three‑phase induction motors; torque‑speed‑efficiency measurement.</p>
+          <ul class="muted">
+            <li><strong>Lab work:</strong> open/short‑circuit tests and load characteristics.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="col-6 card border-left">
+          <h3>Autonomous Robot Car (Arduino)</h3>
+          <p class="muted">Line‑following, obstacle avoidance, and object manipulation using IR sensors, servos, and Arduino.</p>
+        </div>
+        <div class="col-6 card border-left">
+          <h3>FPGA vs ASIC for Satellite Systems</h3>
+          <p class="muted">Compared FPGA and ASIC designs for satellite subsystems in terms of performance, power, and cost.</p>
+        </div>
+        <div class="col-6 card border-left">
+          <h3>Smart Irrigation System (IoT)</h3>
+          <p class="muted">Self‑optimizing irrigation using Raspberry Pi, soil‑moisture sensing, and control logic to reduce water/energy.</p>
+        </div>
+        <div class="col-6 card border-left">
+          <h3>Voice‑Based Disease Detection</h3>
+          <p class="muted">DSP feature extraction and ML classifiers (e.g., SVM, RF) for screening potential from audio.</p>
+        </div>
+        <div class="col-6 card border-left">
+          <h3>Solar Panel I–V Curve Analysis</h3>
+          <p class="muted">Modeled PV behavior under different irradiance/temperature conditions; computed efficiency metrics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LABS -->
+<section id="labs" class="section">
+  <h2>Introduction to AI — Laboratory Work</h2>
+  <div class="grid">
+    <div class="col-6 card border-left">
+      <h3>Lab 1 — IMDB Dataset Exploration</h3>
+      <p class="muted">
+        In this lab, I explored the IMDB movie dataset using Python and pandas to understand the fundamentals of data preprocessing and analysis.
+        I cleaned and structured the data, handled missing values, and performed statistical summarization to extract key insights such as rating distributions and genre trends.
+        This lab built my foundation in data wrangling, exploratory data analysis (EDA), and working with real-world structured datasets.
+      </p>
+      <ul class="muted">
+        <li>Tech stack: Python, pandas, matplotlib</li>
+        <li>Skills developed: Data cleaning, filtering, EDA, and visualization</li>
+      </ul>
+    </div>
+
+    <div class="col-6 card border-left">
+      <h3>Lab 2 — Data Science Workflow</h3>
+      <p class="muted">
+        This lab focused on applying the complete data science pipeline — from data ingestion and transformation to model training and performance evaluation.
+        I implemented a simple machine learning model using scikit-learn, applied feature encoding and normalization, and analyzed prediction accuracy through metrics and graphs.
+        The experience enhanced my understanding of how raw data evolves into actionable insights through AI-driven modeling.
+      </p>
+      <ul class="muted">
+        <li>Tech stack: Python, scikit-learn, pandas, seaborn</li>
+        <li>Skills developed: Data preprocessing, model evaluation, train-test split, accuracy measurement</li>
+      </ul>
+    </div>
+
+    <div class="col-6 card border-left">
+      <h3>Lab 3 — Weather Prediction using Machine Learning</h3>
+      <p class="muted">
+        The third lab combined all prior skills to build a predictive model that classifies weather conditions based on temperature, humidity, and wind speed data.
+        I trained multiple classifiers, including Decision Trees and Random Forests, and compared their accuracy through confusion matrices and visualizations.
+        Beyond coding, the focus was on interpreting model outputs and understanding how data features influence predictions in real-life applications such as climate forecasting and smart agriculture.
+      </p>
+      <ul class="muted">
+        <li>Tech stack: Python, scikit-learn, matplotlib</li>
+        <li>Skills developed: Model comparison, data visualization, feature importance analysis</li>
+      </ul>
+    </div>
+  </div>
 </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="panel">
+        <p>Email: <a href="mailto:Laaturkistani@effta.edu.sa">Laaturkistani@effta.edu.sa</a></p>
+        <p class="muted">Phone Number: +966 54 021 2414</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" style="text-align:center;color:#e9f3e5;padding:20px 12px;border-top:1px solid rgba(255,255,255,.06)">
+    <p>© <span id="y"></span> Layan Mansour Turkistani — Protfolio</p>
+  </footer>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
