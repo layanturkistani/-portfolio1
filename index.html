@@ -19,7 +19,7 @@
       --accent:#ffffff;             /* button text */
       --heading:lab(50.15% -17.45 13.99);     /* heading color requested */
       --max:1100px;
-      --ring: 0 0 0 3px rgba(35,62,29,.15);
+      --ring: 0 0 0 3px rgba(24, 30, 22, 0.15);
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
@@ -37,7 +37,7 @@
     .btn:focus{outline:none;box-shadow:var(--ring)}
 
     /* Hero */
-    .hero{max-width:var(--max);margin:40px auto;text-align:center;padding:56px 18px;background:radial-gradient(circle at center,#e8f3e8 0%, hsl(71, 100%, 96%) 100%);border-radius:18px;border:1px solid rgba(35,62,29,.15)}
+    .hero{max-width:var(--max);margin:40px auto;text-align:center;padding:56px 18px;background:radial-gradient(circle at center,#e8f3e8 0%, hwb(56 84% 5%) 100%);border-radius:18px;border:1px solid rgba(35,62,29,.15)}
     .hero h1{font-size:clamp(28px,3.4vw,48px);line-height:1.15;margin:8px 0;color:var(--brand)}
     .hero p{color:#2c3b2a;margin:0 0 20px;font-weight:500}
     .hero-img{width:150px;height:150px;margin:0 auto 16px;object-fit:cover;border-radius:50%;border:4px solid #2c382a;box-shadow:0 0 15px rgba(84,113,84,.2)}
@@ -90,15 +90,38 @@
 
 
     <!-- ABOUT -->
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <div class="panel">
-        <p>I’m a fourth-year Electrical and Computer Engineering undergraduate at Effat University in Jeddah, Saudi Arabia. My interests span embedded systems, control engineering, digital signal processing, and artificial intelligence — where hardware meets intelligent computation. I’m passionate about designing smart, efficient technologies that merge electronics, data, and automation to create meaningful real-world solutions.
-    <p> </p>
-   
-            With a strong foundation in mathematics, programming, and system design, I enjoy exploring how engineering innovation can make technology more adaptive, sustainable, and human-centered. Whether it’s developing IoT systems, intelligent controllers, or data-driven applications, I’m driven by curiosity and a desire to bridge creativity with engineering precision.</p>
-      </div>
-    </section>
+    <!-- ABOUT -->
+<section id="about" class="section about">
+  <h2>About Me</h2>
+  <div class="panel">
+    <p class="lead">
+      I’m a fourth-year Electrical and Computer Engineering undergraduate at Effat University in Jeddah, Saudi Arabia. 
+      My interests span embedded systems, control engineering, digital signal processing, and artificial intelligence — 
+      where hardware meets intelligent computation. I’m passionate about designing smart, efficient technologies that 
+      merge electronics, data, and automation to create meaningful real-world solutions.
+    </p>
+
+    <hr class="rule" />
+
+    <p class="body">
+      With a strong foundation in mathematics, programming, and system design, I enjoy exploring how engineering innovation 
+      can make technology more adaptive, sustainable, and human-centered. Whether it’s developing IoT systems, intelligent 
+      controllers, or data-driven applications, I’m driven by curiosity and a desire to bridge creativity with engineering precision.
+    </p>
+
+    <!-- Optional soft skill chips (nice visual touch) -->
+    <div class="kudos">
+      <span>Embedded Systems</span>
+      <span>Control Engineering</span>
+      <span>DSP</span>
+      <span>Artificial Intelligence</span>
+      <span>IoT</span>
+      <span>Data-Driven Design</span>
+      <span>Systems Thinking</span>
+    </div>
+  </div>
+</section>
+
      <!-- EDUCATION -->
 <section id="education" class="section" style="margin-bottom: 40px;">
   <h2>Education</h2>
@@ -178,7 +201,7 @@
           <h3>Principles of Computing (Python)</h3>
           <p class="muted">Algorithmic thinking, data structures, and clean coding practices using Python.</p>
           <ul class="muted">
-            <li><strong>Mini‑project:</strong> Sensor‑driven analog‑control simulation with data logging and simple visualization.</li>
+            <li><strong>Project:</strong> Sensor‑driven analog‑control simulation with data logging and simple visualization.</li>
           </ul>
         </div>
 
@@ -188,23 +211,6 @@
           <ul class="muted">
             <li><strong>Project:</strong> <em>I–V Curve Simulation</em> — modeled PV I–V characteristics and computed key points from input parameters.</li>
           </ul>
-        </div>
-
-        <div class="col-6 card border-left">
-          <h3>Communication Systems</h3>
-          <p class="muted">Analog/digital modulation, channel impairments, bandwidth/bit‑rate trade‑offs.</p>
-          <ul class="muted">
-            <li><strong>Exercises:</strong> AM/FM modeling with noise and simple demodulation blocks.</li>
-          </ul>
-        </div>
-
-        <div class="col-6 card border-left">
-          <h3>Basic Electrical Machines</h3>
-          <p class="muted">DC machines, transformers, and three‑phase induction motors; torque‑speed‑efficiency measurement.</p>
-          <ul class="muted">
-            <li><strong>Lab work:</strong> open/short‑circuit tests and load characteristics.</li>
-          </ul>
-        </div>
       </div>
     </section>
 
